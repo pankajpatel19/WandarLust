@@ -31,27 +31,14 @@
       </div>
       <div class="navbar-nav ms-auto" id="navbarNav">
         <a class="nav-link active" href="/listings/new">Create New List</a>
-        <% if (!curruser) { %>
+        <% if (typeof curruser === "undefined" || !curruser) { %>
 
         <a class="nav-link active" aria-current="page" href="/signup">SignUp</a>
         <a class="nav-link active" href="/login">Login</a>
 
         <% } %> <% if (curruser) { %>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Profile
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="nav-link" href="/logout">LogOut</a></li>
-          </ul>
-        </li>
 
+        <a class="nav-link" href="/logout">LogOut</a>
         <% } %>
       </div>
     </div>
