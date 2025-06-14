@@ -30,19 +30,15 @@
         </form>
       </div>
       <div class="navbar-nav ms-auto" id="navbarNav">
-        <a class="nav-link active bg-light" href="/listings/new"
-          >Create New List</a
-        >
+        <a class="nav-link active" href="/listings/new">Create New List</a>
         <% if (!curruser) { %>
 
-        <a class="nav-link active bg-light" aria-current="page" href="/signup"
-          >SignUp</a
-        >
-        <a class="nav-link active bg-light" href="/login">Login</a>
+        <a class="nav-link active" aria-current="page" href="/signup">SignUp</a>
+        <a class="nav-link active" href="/login">Login</a>
 
         <% } %> <% if (curruser) { %>
 
-        <a class="nav-link bg-light" href="/logout">LogOut</a>
+        <a class="nav-link" href="/logout">LogOut</a>
         <% } %>
       </div>
     </div>
