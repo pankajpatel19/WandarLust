@@ -31,7 +31,7 @@
       </div>
       <div class="navbar-nav ms-auto" id="navbarNav">
         <a class="nav-link active" href="/listings/new">Create New List</a>
-        <% if (typeof curruser === "undefined" || !curruser) { %>
+        <% if (!curruser) { %>
 
         <a class="nav-link active" aria-current="page" href="/signup">SignUp</a>
         <a class="nav-link active" href="/login">Login</a>
