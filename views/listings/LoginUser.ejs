@@ -1,0 +1,34 @@
+<% layout('layouts/boiler') -%>
+<div class="row m-1">
+  <h2 class="offset-3">SignIn On Wanderlust</h2>
+  <div class="col-5 offset-3">
+    <form
+      action="/login"
+      method="post"
+      novalidate
+      class="needs-validation border border-2 p-2"
+    >
+      <div class="mb-2 mt-2">
+        <label for="username">UserName</label>
+        <input
+          name="username"
+          class="form-control"
+          id="username"
+          type="text"
+          required
+        />
+      </div>
+      <div class="mb-2">
+        <label for="password">Password</label>
+        <input
+          name="password"
+          class="form-control"
+          id="password"
+          type="password"
+          required
+        />
+      </div>
+      <button class="btn btn-success">SignIn</button>
+    </form>
+  </div>
+</div>

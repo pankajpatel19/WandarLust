@@ -1,0 +1,135 @@
+/* navbar */
+.navbar{
+  height: 5rem;
+  background-color:white !important;
+
+}
+.search-main{
+  border: 1px solid silver;
+  border-radius: 2.5rem;
+}
+.btn-search {
+  background-color: rgb(251, 69, 90);
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border: 1px solid white;
+  border-radius: 2.5rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+.btn-search:hover {
+  background-color: rgb(251, 69, 90);
+  color: white;
+
+}
+
+.search-input{
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-right: 1px black;
+
+}
+
+
+/* footer */
+.f-info-links a{
+  text-decoration: none;
+  color: black;
+}
+
+.f-info-social,.f-info-links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  margin: 1rem;
+}
+.f-info-social i{
+  margin-right: 1rem;
+}
+
+.f-info{
+  background-color: rgb(222, 224, 224);
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+  margin-top: 1rem;
+}
+
+/* card for index page */
+
+.card{
+  border: none;
+}
+.card-img-top{
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+
+.card-img-overlay{
+  opacity: 0;
+}
+
+.card-img-overlay:hover{
+  opacity: 0.2;
+  background-color: white;
+}
+.title{
+  color: black;
+}
+
+/* create ejs */
+
+.form-new{
+  width: 50%;
+  height: 25%;
+}
+
+/* for airbnb logo */
+.fa-airbnb{
+  width: 2rem;
+  color: red;
+}
+/* filters */
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+  }
+  .filter {
+    text-align: center;
+    margin: 2rem 2rem 2rem 0;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .filter p {
+    font-size: 0.9rem;
+  }
+  .filter a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .tax-toggle{
+    margin-left: 25rem;
+    font-size: 0.9rem;
+    width: 13rem;
+    text-align: center;
+    padding: 0.7rem;
+    opacity: 0.6;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-top: -0.5rem;
+  }
+
+  /* index gst */
+  .gst{
+    display: none;
+  }
+  

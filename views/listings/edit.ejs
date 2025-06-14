@@ -1,0 +1,72 @@
+<% layout('layouts/boiler') -%>
+<body>
+  <div class="row">
+    <div class="col col-6 offset-2">
+      <h1 class="mt-2">Edit Your list</h1>
+      <form
+        action="/listings/<%= list._id %>?_method=PUT"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-2">
+          <input
+            name="listing[title]"
+            value="<%= list.title %>"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-2">
+          <textarea
+            name="listing[description]"
+            id=""
+            cols="30"
+            rows="10"
+            class="form-control"
+          >
+<%= list.description %></textarea
+          >
+          <div>
+            <p>Original Image</p>
+            <img src="<%= originalUrl %>" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-2 col-4">
+            <input
+              name="listing[image]"
+              type="file"
+              value="<%= list.image %>"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-2 col-8">
+            <input
+              name="listing[cost]"
+              value="<%= list.cost %>"
+              type="number"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="mb-2">
+          <input
+            name="listing[location]"
+            value="<%= list.location %>"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            name="listing[country]"
+            value="<%= list.country %>"
+            type="text"
+            class="form-control"
+          />
+        </div>
+        <button class="btn btn-danger">EDIT</button>
+      </form>
+    </div>
+  </div>
+</body>
