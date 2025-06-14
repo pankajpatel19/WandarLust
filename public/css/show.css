@@ -3,7 +3,7 @@
   height: 5rem;
 }
 .nav-link{
-  background-color: white;
+  background-color: rgb(253, 251, 251);
   color: black !important;
   border: 1px solid white;
   border-radius: 2.5rem;
@@ -12,7 +12,7 @@
 }
 .navbar a{
     color: rgb(9, 9, 9) !important;
-
+    padding: 1rem;
 }
 .search-main{
   border: 1px solid silver;
