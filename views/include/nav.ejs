@@ -14,9 +14,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="navbar-nav">
+      <!-- <div class="navbar-nav">
         <a class="nav-link active" href="/listings">Explore</a>
-      </div>
+      </div> -->
       <div class="nav-link ms-auto search-main">
         <form class="d-flex" role="search">
           <input
@@ -30,15 +30,19 @@
         </form>
       </div>
       <div class="navbar-nav ms-auto" id="navbarNav">
-        <a class="nav-link active" href="/listings/new">Create New List</a>
+        <a class="nav-link active bg-light" href="/listings/new"
+          >Create New List</a
+        >
         <% if (!curruser) { %>
 
-        <a class="nav-link active" aria-current="page" href="/signup">SignUp</a>
-        <a class="nav-link active" href="/login">Login</a>
+        <a class="nav-link active bg-light" aria-current="page" href="/signup"
+          >SignUp</a
+        >
+        <a class="nav-link active bg-light" href="/login">Login</a>
 
         <% } %> <% if (curruser) { %>
 
-        <a class="nav-link" href="/logout">LogOut</a>
+        <a class="nav-link bg-light" href="/logout">LogOut</a>
         <% } %>
       </div>
     </div>
