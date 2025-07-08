@@ -19,9 +19,15 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="w-100 d-flex flex-column flex-md-row align-items-center">
         <div class="flex-grow-1 mb-2 mb-md-0 me-md-3">
-          <form class="d-flex" role="search">
+          <form
+            action="/listings/search"
+            method="get"
+            class="d-flex"
+            role="search"
+          >
             <input
               type="search"
+              name="q"
               class="form-control search-input me-2"
               placeholder="Search Destination"
             />
@@ -31,7 +37,7 @@
           </form>
         </div>
         <div class="navbar-nav ms-md-auto text-center text-md-end">
-          <a class="nav-link active" href="/listings/new">Create New List</a>
+          <a class="nav-link active" href="/listings/new">Become A host</a>
           <% if (!curruser) { %>
           <a class="nav-link active" aria-current="page" href="/signup"
             >SignUp</a

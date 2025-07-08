@@ -1,0 +1,22 @@
+<% layout('layouts/boiler') -%>
+<div class="container">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mt-4 g-4">
+    <% for(let listings of listing) { %>
+    <div class="col">
+      <a href="/listings/<%= listings._id %>" style="text-decoration: none">
+        <div class="card h-100">
+          <img src="<%= listings.image.url %>" class="card-img-top" alt="..." />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text title"><b><%= listings.title %></b></p>
+            <p class="card-text title">
+              &#8377;<%= listings.cost.toLocaleString("en-IN") %> - Per Night
+              <i class="gst">&nbsp;&nbsp; +18% GST</i>
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% } %>
+  </div>
+</div>

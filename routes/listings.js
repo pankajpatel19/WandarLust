@@ -26,7 +26,31 @@ router
 
 //create new route
 router.get("/new", isLogedIn, Listingroutes.renderNewListings);
+//Search
+router.get("/search", async (req, res) => {
+  let query = req.query.q;
+  console.log(query);
 
+  if (!query) {
+    res.redirect("/listings");
+  }
+
+  const listing = await Listing.find({
+    $or: [
+      { title: { $regex: query, $options: "i" } },
+      { location: { $regex: query, $options: "i" } },
+      { category: { $regex: query, $options: "i" } },
+    ],
+  });
+
+  console.log(listing);
+  if (listing.length === 0) {
+    req.flash("error", "the place to search you are trying is not found");
+    res.redirect("/listings");
+  } else {
+    res.render("listings/search.ejs", { listing, query });
+  }
+});
 //icon
 router.get("/category/:category", async (req, res) => {
   let { category } = req.params;
