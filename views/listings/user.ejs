@@ -1,14 +1,14 @@
 <% layout('layouts/boiler') -%>
 <div class="row m-1">
-  <h2 class="offset-3">SignUp On Wanderlust</h2>
-  <div class="col-5 offset-3">
+  <h2 class="text-center mt-4 mb-3">SignUp On Wanderlust</h2>
+  <div class="col-12 col-md-8 col-lg-5 mx-auto">
     <form
       action="/signup"
       method="post"
       novalidate
-      class="needs-validation border border-2 p-2"
+      class="needs-validation border border-2 p-3"
     >
-      <div class="mb-2 mt-2">
+      <div class="mb-3 mt-2">
         <label for="username">UserName</label>
         <input
           name="username"
@@ -19,7 +19,7 @@
         />
         <div class="valid-feedback">Looks good!</div>
       </div>
-      <div class="mb-2">
+      <div class="mb-3">
         <label for="email">Email</label>
         <input
           name="email"
@@ -29,7 +29,7 @@
           required
         />
       </div>
-      <div class="mb-2">
+      <div class="mb-3">
         <label for="password">Password</label>
         <input
           name="password"
@@ -39,7 +39,7 @@
           required
         />
       </div>
-      <button class="btn btn-success">SignUp</button>
+      <button class="btn btn-success w-100">SignUp</button>
     </form>
   </div>
 </div>

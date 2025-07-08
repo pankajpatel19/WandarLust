@@ -1,16 +1,15 @@
 <% layout('layouts/boiler') -%>
-<br />
-<div class="row">
-  <div class="col-6 offset-2">
+<div class="row mt-4">
+  <div class="col-12 col-md-8 col-lg-6 mx-auto">
     <form
       action="/listings"
       method="POST"
       novalidate
-      class="needs-validation border border-2 p-2"
+      class="needs-validation border border-2 p-3"
       enctype="multipart/form-data"
     >
-      <h2>Create New List</h2>
-      <div class="mb-2">
+      <h2 class="mb-3">Create New List</h2>
+      <div class="mb-3">
         <input
           name="listing[title]"
           class="form-control"
@@ -21,7 +20,7 @@
         />
         <div class="valid-feedback">Looks good!</div>
       </div>
-      <div class="mb-2">
+      <div class="mb-3">
         <textarea
           name="listing[description]"
           class="form-control"
@@ -34,7 +33,7 @@
         <div class="valid-feedback">Looks good!</div>
       </div>
       <div class="row">
-        <div class="mb-2 col-md-6">
+        <div class="mb-3 col-12 col-md-6">
           <input
             name="listing[image]"
             class="form-control"
@@ -43,7 +42,7 @@
             required
           />
         </div>
-        <div class="mb-2 col-md-6">
+        <div class="mb-3 col-12 col-md-6">
           <input
             name="listing[cost]"
             placeholder="Enter Price"
@@ -57,7 +56,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="mb-2 col-6">
+        <div class="mb-3 col-12 col-md-6">
           <input
             name="listing[location]"
             class="form-control"
@@ -69,7 +68,7 @@
             Please provide a valid Location.
           </div>
         </div>
-        <div class="mb-2 col-6">
+        <div class="mb-3 col-12 col-md-6">
           <input
             name="listing[country]"
             class="form-control"
@@ -84,7 +83,7 @@
       </div>
       <select
         name="listing[category]"
-        class="form-select mb-2"
+        class="form-select mb-3"
         aria-label="Default select example"
       >
         <option selected>Select place</option>
@@ -97,7 +96,7 @@
         <option value="Farms">Farms</option>
         <option value="Beach">Beach</option>
       </select>
-      <button class="btn btn-danger">ADD</button>
+      <button class="btn btn-danger w-100">ADD</button>
     </form>
   </div>
 </div>

@@ -1,19 +1,20 @@
 <% layout('layouts/boiler') -%>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 mt-3 g-4">
   <% for(let listing of listings) { %>
-  <br />
-  <a href="/listings/<%= listing._id %>" style="text-decoration: none">
-    <div class="card col">
-      <img src="<%= listing.image.url %>" class="card-img-top" alt="..." />
-      <div class="card-img-overlay"><p>hello</p></div>
-      <div class="card-body">
-        <p class="card-text title"><b><%= listing.title %></b></p>
-        <p class="card-text title">
-          &#8377;<%= listing.cost.toLocaleString("en-IN") %> - Per Night
-          <i class="gst">&nbsp;&nbsp; +18% GST</i>
-        </p>
+  <div class="col">
+    <a href="/listings/<%= listing._id %>" style="text-decoration: none">
+      <div class="card h-100">
+        <img src="<%= listing.image.url %>" class="card-img-top" alt="..." />
+        <div class="card-img-overlay"><p>hello</p></div>
+        <div class="card-body">
+          <p class="card-text title"><b><%= listing.title %></b></p>
+          <p class="card-text title">
+            &#8377;<%= listing.cost.toLocaleString("en-IN") %> - Per Night
+            <i class="gst">&nbsp;&nbsp; +18% GST</i>
+          </p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
   <% } %>
 </div>
