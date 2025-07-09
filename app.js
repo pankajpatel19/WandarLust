@@ -101,7 +101,8 @@ app.use((req, res, next) => {
 
 //routes
 app.get("/", (req, res, next) => {
-  res.render("index.ejs");
+  res.render("/listings");
+  next();
 });
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewRouter);
