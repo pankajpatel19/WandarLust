@@ -101,7 +101,7 @@ app.use((req, res, next) => {
 
 //routes
 app.get("/", (req, res, next) => {
-  res.render("/listings");
+  res.redirect("/listings");
   next();
 });
 app.use("/listings", listingsRouter);
