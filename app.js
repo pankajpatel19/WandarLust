@@ -6,7 +6,7 @@ if (process.env.NODE_ENV != "production") {
 //for connection
 const express = require("express");
 const app = express();
-const port = 1916;
+const port = process.env.PORT || 1916;
 
 const mongoose = require("mongoose");
 const method = require("method-override");
@@ -100,6 +100,10 @@ app.use((req, res, next) => {
 });
 
 //routes
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
