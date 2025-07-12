@@ -29,8 +29,6 @@ router.get("/new", isLogedIn, Listingroutes.renderNewListings);
 //Search
 router.get("/search", async (req, res) => {
   let query = req.query.q;
-  console.log(query);
-
   if (!query) {
     res.redirect("/listings");
   }
