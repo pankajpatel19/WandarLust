@@ -113,7 +113,6 @@ app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
 
-// //error handling if someone created new post
 app.use((err, req, res, next) => {
   let { statusCode = 500, message = "something went wrong" } = err;
   res.status(statusCode).render("listings/error.ejs", { message });
@@ -122,15 +121,3 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`server start on ${port}`);
 });
-
-//example of sent cookie
-// app.get("/cookie", (req, res) => {
-//   let { name = "anonymos" } = req.cookies;
-//   res.send(`cookies send ${name}`);
-// });
-
-//get signcookie value
-// app.get("/verify", (req, res) => {
-//   console.log(req.signedCookies);
-//   res.send("cookie signed");
-// });
